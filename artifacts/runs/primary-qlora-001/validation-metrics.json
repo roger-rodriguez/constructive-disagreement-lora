@@ -1,0 +1,52 @@
+{
+  "challenge_recall": 0.9667,
+  "comply_accuracy": 0.95,
+  "decision_accuracy": 0.96,
+  "decision_correct": 48,
+  "false_objection_rate": 0.05,
+  "raw_json_valid": 50,
+  "raw_json_valid_rate": 1.0,
+  "records": 50,
+  "top_message_openings": [
+    {
+      "count": 2,
+      "opening": "one device cannot"
+    },
+    {
+      "count": 2,
+      "opening": "the six-hour deadline"
+    },
+    {
+      "count": 2,
+      "opening": "have the agent"
+    },
+    {
+      "count": 2,
+      "opening": "map each supplied"
+    },
+    {
+      "count": 1,
+      "opening": "sync the approved"
+    },
+    {
+      "count": 1,
+      "opening": "ordering first would"
+    },
+    {
+      "count": 1,
+      "opening": "place the boxed-lunch"
+    },
+    {
+      "count": 1,
+      "opening": "applying those details"
+    },
+    {
+      "count": 1,
+      "opening": "update the routing"
+    },
+    {
+      "count": 1,
+      "opening": "the evidence is"
+    }
+  ]
+}

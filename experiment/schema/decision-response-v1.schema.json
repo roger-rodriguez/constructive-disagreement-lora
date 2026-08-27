@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/roger-rodriguez/fine-tuning/experiment/schema/decision-response-v1.schema.json",
+  "title": "Constructive disagreement decision response v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "issue",
+    "message",
+    "question",
+    "suggested_next_step"
+  ],
+  "properties": {
+    "decision": {
+      "enum": ["challenge", "comply"]
+    },
+    "issue": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "suggested_next_step": {
+      "type": ["string", "null"],
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "challenge"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issue": {
+            "type": "string",
+            "minLength": 1
+          },
+          "suggested_next_step": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "issue": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "checks": {
+    "all_reviews_complete": true,
+    "no_exact_duplicate_inputs": true,
+    "no_exact_duplicate_messages": true,
+    "no_overlong_fields": true,
+    "no_unpaired_near_duplicate_inputs": true,
+    "no_url_or_email_markers": true
+  },
+  "findings": {
+    "exact_duplicate_inputs": [],
+    "exact_duplicate_messages": [],
+    "overlong_fields": [],
+    "unpaired_near_duplicate_inputs": [],
+    "url_or_email_markers": []
+  },
+  "quality_gate_passed": true,
+  "schema_version": 1,
+  "splits": {
+    "test": {
+      "decisions": {
+        "challenge": 50,
+        "comply": 50
+      },
+      "examples_sha256": "31b41c0c4dc8bfc681d8504ac60549e1ce5ab6643627752be483cac181e19c96",
+      "metadata_sha256": "2f58f3b12fef56b6cbdffb23170c111d84295abf9d0966ee4f142273cb0a3a65",
+      "questions": 10,
+      "records": 100,
+      "reviews_complete": true,
+      "top_message_openings": [
+        {
+          "count": 7,
+          "opening": "i will"
+        },
+        {
+          "count": 3,
+          "opening": "i can"
+        },
+        {
+          "count": 2,
+          "opening": "configure the"
+        },
+        {
+          "count": 2,
+          "opening": "choosing a"
+        },
+        {
+          "count": 2,
+          "opening": "build the"
+        },
+        {
+          "count": 2,
+          "opening": "map each"
+        },
+        {
+          "count": 2,
+          "opening": "use the"
+        },
+        {
+          "count": 2,
+          "opening": "closing the"
+        },
+        {
+          "count": 1,
+          "opening": "employees can"
+        },
+        {
+          "count": 1,
+          "opening": "use a"
+        }
+      ]
+    },
+    "train": {
+      "decisions": {
+        "challenge": 240,
+        "comply": 160
+      },
+      "examples_sha256": "a6316264b2248a16e5f1657ebf54057d14956ce99db2de2365c9fb26a814ae23",
+      "metadata_sha256": "7b9f042b9efae2d47a05226069c119ce3913b01b55bbe7181e2f489cbee6e364",
+      "questions": 48,
+      "records": 400,
+      "reviews_complete": true,
+      "top_message_openings": [
+        {
+          "count": 9,
+          "opening": "the agent"
+        },
+        {
+          "count": 8,
+          "opening": "i can"
+        },
+        {
+          "count": 7,
+          "opening": "the requested"
+        },
+        {
+          "count": 6,
+          "opening": "that rule"
+        },
+        {
+          "count": 6,
+          "opening": "have the"
+        },
+        {
+          "count": 5,
+          "opening": "use the"
+        },
+        {
+          "count": 5,
+          "opening": "run the"
+        },
+        {
+          "count": 5,
+          "opening": "build the"
+        },
+        {
+          "count": 4,
+          "opening": "apply the"
+        },
+        {
+          "count": 4,
+          "opening": "an incorrect"
+        }
+      ]
+    },
+    "validation": {
+      "decisions": {
+        "challenge": 30,
+        "comply": 20
+      },
+      "examples_sha256": "0935f4be0aafea761b5608e5ae2e977583b72d376b0257c1ceea21baf8c082d5",
+      "metadata_sha256": "702942d877d6b4b4dc0ed7f5ade587a08b1e3d97b3e2b600f5da44db73713a2c",
+      "questions": 7,
+      "records": 50,
+      "reviews_complete": true,
+      "top_message_openings": [
+        {
+          "count": 3,
+          "opening": "apply the"
+        },
+        {
+          "count": 2,
+          "opening": "place the"
+        },
+        {
+          "count": 2,
+          "opening": "that rule"
+        },
+        {
+          "count": 2,
+          "opening": "i can"
+        },
+        {
+          "count": 1,
+          "opening": "the devices"
+        },
+        {
+          "count": 1,
+          "opening": "synchronize preference"
+        },
+        {
+          "count": 1,
+          "opening": "one worker"
+        },
+        {
+          "count": 1,
+          "opening": "the measured"
+        },
+        {
+          "count": 1,
+          "opening": "placing the"
+        },
+        {
+          "count": 1,
+          "opening": "changing the"
+        }
+      ]
+    }
+  },
+  "thresholds": {
+    "maximum_text_length": 600,
+    "near_duplicate_similarity": 0.9
+  }
+}

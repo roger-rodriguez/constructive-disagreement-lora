@@ -1,0 +1,76 @@
+[project]
+name = "disagree-modeling"
+version = "0.0.0"
+description = "Data validation, training, evaluation, and publishing for the experiment"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Roger Rodriguez" }]
+dependencies = [
+  "disagree-contracts",
+  "modal==1.5.4",
+]
+
+[project.scripts]
+disagree-freeze-data = "disagree_modeling.freeze_data:main"
+disagree-evaluation-plan = "disagree_modeling.evaluation_plan:main"
+disagree-publish-adapter = "disagree_modeling.publish_adapter:main"
+disagree-compatibility-plan = "disagree_modeling.compatibility_plan:main"
+disagree-training-plan = "disagree_modeling.training_plan:main"
+disagree-validate-data = "disagree_modeling.validate_data:main"
+
+[build-system]
+requires = ["uv_build==0.12.6"]
+build-backend = "uv_build"
+
+[tool.ty.environment]
+python-version = "3.11"
+root = ["./src"]
+
+[tool.ty.src]
+include = ["src", "tests"]
+
+[tool.coverage.run]
+branch = true
+omit = [
+  "src/disagree_modeling/evaluate_runtime.py",
+  "src/disagree_modeling/modal_evaluate.py",
+  "src/disagree_modeling/modal_train.py",
+  "src/disagree_modeling/publish_adapter_runtime.py",
+  "src/disagree_modeling/modal_compatibility.py",
+  "src/disagree_modeling/compatibility_runtime.py",
+  "src/disagree_modeling/train_runtime.py",
+]
+source = ["disagree_modeling"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.uv]
+default-groups = ["dev"]
+required-version = "==0.12.6"
+
+[tool.uv.sources]
+disagree-contracts = { path = "../../packages/contracts", editable = true }
+
+[dependency-groups]
+dev = [
+  "coverage[toml]==7.15.4",
+  "ty==0.0.75",
+]
+publish = [
+  "huggingface-hub==1.28.0",
+]
+model = [
+  "accelerate==1.14.0",
+  "bitsandbytes==0.50.1",
+  "datasets==4.3.0",
+  "huggingface-hub==1.28.0",
+  "peft==0.20.0",
+  "torch==2.9.1",
+  "transformers==5.5.0",
+  "trl==0.24.0",
+  "unsloth[cu128-torch291]==2026.8.19",
+  "unsloth-zoo==2026.8.13",
+  "xformers==0.0.33.post2",
+]

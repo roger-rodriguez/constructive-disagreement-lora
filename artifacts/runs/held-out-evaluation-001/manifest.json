@@ -1,0 +1,156 @@
+{
+  "adapter_run_id": "primary-qlora-001",
+  "artifact_sha256": {
+    "blinded-generations.jsonl": "3acc273e9c9984bf5c2afd0ffe22f627cbd1d7c77b1784f807b98b030cc15d5f",
+    "blinding-key.json": "8c298ecfd26261dadb2fa98f91b0e460de1e3697f84f1ef6fc7e267c0c5c2dcc",
+    "generations.jsonl": "2bb53c76165e914ac387365732954e9fe958a8016470a8d1df024b19115141d0",
+    "metrics.json": "f2388037254c2889ab446881ddc08fb9fe7b2a0aac655dbe001436b53d1b7973"
+  },
+  "condition_seconds": {
+    "A": 184.631,
+    "B": 209.171,
+    "C": 112.287
+  },
+  "conditions": {
+    "A": {
+      "model": "base",
+      "prompt": "basic"
+    },
+    "B": {
+      "model": "base",
+      "prompt": "strong"
+    },
+    "C": {
+      "model": "lora",
+      "prompt": "basic"
+    }
+  },
+  "decoding": {
+    "batch_size": 8,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_sequence_length": 1024,
+    "seed": 3407,
+    "temperature": null
+  },
+  "elapsed_seconds": 527.252,
+  "finished_at": "2026-08-26T02:25:52.330754+00:00",
+  "frozen_inputs": {
+    "adapter_model_sha256": "8b211ae87e6f7b302f3c2adb80a22bbf2bae129d8d683285f77470e44cbdc63f",
+    "basic_prompt_sha256": "638febed692b5c909932753654dd8d167282a775b2aa15fdf0d8a2d79dc2c3b0",
+    "manifest_sha256": "9392eebd789c3fe1b124d0c4f697e548298f312025f5cd42c9d8dcc514a4e99c",
+    "strong_prompt_sha256": "6613e3b748db35e0bd9714b8ece0bee20c3b4ed07d1d372b8723731d084eb5ea",
+    "test_sha256": "31b41c0c4dc8bfc681d8504ac60549e1ce5ab6643627752be483cac181e19c96"
+  },
+  "gpu": "NVIDIA L4",
+  "metrics": {
+    "comparisons": {
+      "C_minus_A": {
+        "balanced_accuracy_difference": 0.16,
+        "mcnemar_exact_two_sided": {
+          "baseline_correct_candidate_wrong": 1,
+          "candidate_correct_baseline_wrong": 17,
+          "discordant_pairs": 18,
+          "p_value": 0.00014496
+        },
+        "paired_stratified_bootstrap_95_ci": {
+          "lower": 0.09,
+          "samples": 10000,
+          "seed": 3407,
+          "upper": 0.24
+        }
+      },
+      "C_minus_B": {
+        "balanced_accuracy_difference": 0.01,
+        "mcnemar_exact_two_sided": {
+          "baseline_correct_candidate_wrong": 2,
+          "candidate_correct_baseline_wrong": 3,
+          "discordant_pairs": 5,
+          "p_value": 1.0
+        },
+        "paired_stratified_bootstrap_95_ci": {
+          "lower": -0.03,
+          "samples": 10000,
+          "seed": 3407,
+          "upper": 0.05
+        }
+      },
+      "material_win_over_strong_prompt": {
+        "maximum_specificity_loss": 0.05,
+        "observed_balanced_accuracy_gain": 0.01,
+        "observed_specificity_change": -0.02,
+        "required_balanced_accuracy_gain": 0.08,
+        "threshold_met": false
+      }
+    },
+    "conditions": {
+      "A": {
+        "balanced_decision_accuracy": 0.81,
+        "decision_accuracy": 0.81,
+        "decision_correct": 81,
+        "false_objection_rate": 0.06,
+        "false_objections": 3,
+        "flawed_request_recall": 0.94,
+        "missed_risk_rate": 0.06,
+        "missed_risks": 3,
+        "raw_json_valid": 87,
+        "raw_json_valid_rate": 0.87,
+        "reasonable_request_specificity": 0.68,
+        "records": 100,
+        "unclear_or_invalid": 13
+      },
+      "B": {
+        "balanced_decision_accuracy": 0.96,
+        "decision_accuracy": 0.96,
+        "decision_correct": 96,
+        "false_objection_rate": 0.04,
+        "false_objections": 2,
+        "flawed_request_recall": 0.96,
+        "missed_risk_rate": 0.04,
+        "missed_risks": 2,
+        "raw_json_valid": 100,
+        "raw_json_valid_rate": 1.0,
+        "reasonable_request_specificity": 0.96,
+        "records": 100,
+        "unclear_or_invalid": 0
+      },
+      "C": {
+        "balanced_decision_accuracy": 0.97,
+        "decision_accuracy": 0.97,
+        "decision_correct": 97,
+        "false_objection_rate": 0.06,
+        "false_objections": 3,
+        "flawed_request_recall": 1.0,
+        "missed_risk_rate": 0.0,
+        "missed_risks": 0,
+        "raw_json_valid": 100,
+        "raw_json_valid_rate": 1.0,
+        "reasonable_request_specificity": 0.94,
+        "records": 100,
+        "unclear_or_invalid": 0
+      }
+    }
+  },
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "model_license": "Apache-2.0",
+  "model_load_seconds": 19.324,
+  "model_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "packages": {
+    "bitsandbytes": "0.50.1",
+    "peft": "0.20.0",
+    "torch": "2.9.1",
+    "transformers": "5.5.0",
+    "unsloth": "2026.8.19",
+    "unsloth-zoo": "2026.8.13",
+    "xformers": "0.0.33.post2"
+  },
+  "run_id": "held-out-evaluation-001",
+  "schema_version": 1,
+  "started_at": "2026-08-26T02:17:05.078463+00:00",
+  "status": "passed",
+  "volumes": {
+    "evaluation_output": "fine-tuning-evaluation-output",
+    "model_cache": "fine-tuning-model-cache",
+    "training_output": "fine-tuning-training-output"
+  }
+}

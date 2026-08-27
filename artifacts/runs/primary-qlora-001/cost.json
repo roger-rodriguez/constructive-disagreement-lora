@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "primary-qlora-001",
+  "currency": "USD",
+  "observed_at": "2026-08-25T21:55:09-04:00",
+  "successful_run_resource_usage_usd": {
+    "l40s": 0.10833337,
+    "cpu": 0.01055381,
+    "memory": 0.01423,
+    "total": 0.13311718
+  },
+  "aborted_pretraining_attempt_usage_usd": {
+    "l40s": 0.00216665,
+    "cpu": 0.00025949,
+    "memory": 0.00029277,
+    "total": 0.00271891
+  },
+  "experiment_app_total_usage_usd": 0.13583609,
+  "workspace_billed_cost_usd_at_observation": 0.0,
+  "credit_treatment": "The successful run and aborted pre-training import attempt used 0.13583609 USD of resources. The workspace billing summary showed zero billed cost after credits and free-storage adjustments. Credits do not reduce the underlying usage reported here.",
+  "source": "Modal CLI billing report and workspace billing summary",
+  "source_interval": "2026-08-26T01:00:00Z hourly resource bucket",
+  "rounding_note": "Values preserve the precision returned by Modal's JSON billing report."
+}

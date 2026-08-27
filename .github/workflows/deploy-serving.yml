@@ -1,0 +1,37 @@
+name: Deploy serving
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Required checks
+    uses: ./.github/workflows/ci.yml
+
+  deploy:
+    name: Deploy to Modal
+    needs: checks
+    environment: serving-production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.6"
+          python-version: "3.11"
+      - name: Sync locked serving environment
+        run: uv sync --directory apps/serving --frozen
+      - name: Deploy serving app
+        env:
+          MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+          MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+        run: >-
+          uv run --directory apps/serving --frozen
+          modal deploy -m disagree_serving.modal_app
+          --name constructive-disagreement

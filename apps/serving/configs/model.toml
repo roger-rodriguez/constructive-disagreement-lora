@@ -1,0 +1,31 @@
+[service]
+app_name = "constructive-disagreement"
+health_label = "constructive-disagreement-health"
+decision_label = "constructive-disagreement"
+
+[model]
+base_id = "Qwen/Qwen3-4B-Instruct-2507"
+base_revision = "cdbee75f17c01a7cc42f958dc650907174af0554"
+adapter_id = "rrod/qwen3-4b-constructive-disagreement-lora"
+adapter_revision = "eae43ddb16c580c4179ed8088c8180b28fb4d572"
+
+[prompt]
+sha256 = "638febed692b5c909932753654dd8d167282a775b2aa15fdf0d8a2d79dc2c3b0"
+
+[generation]
+max_input_characters = 2000
+max_input_tokens = 768
+max_new_tokens = 256
+do_sample = false
+
+[runtime]
+gpu = "L4"
+cpu = 4.0
+memory_mib = 16384
+timeout_seconds = 600
+startup_timeout_seconds = 600
+scaledown_window_seconds = 60
+min_containers = 0
+max_containers = 1
+max_concurrent_inputs = 1
+model_cache_volume = "fine-tuning-model-cache"

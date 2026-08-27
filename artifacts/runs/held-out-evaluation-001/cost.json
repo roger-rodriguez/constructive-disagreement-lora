@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_id": "held-out-evaluation-001",
+  "currency": "USD",
+  "observed_at": "2026-08-25T22:34:01-04:00",
+  "evaluation_function_resource_usage_usd": {
+    "l4": 0.14088883,
+    "cpu": 0.03333992,
+    "memory": 0.04508776,
+    "total": 0.21931651
+  },
+  "evaluation_and_persistence_verification_usage_usd": 0.22,
+  "persistence_verification_usage_usd": 0.00068349,
+  "workspace_billed_cost_usd_at_observation": 0.0,
+  "credit_treatment": "The evaluation and its separate read-only persistence verification increased metered resource usage by 0.22 USD. The workspace billing summary showed zero billed cost after credits and free-storage adjustments. Credits do not reduce the underlying usage reported here.",
+  "source": "Modal CLI per-app billing report and workspace billing summary",
+  "source_interval": "Evaluation began at 2026-08-26T02:17:05Z and completed at 2026-08-26T02:25:52Z",
+  "derivation_note": "The main evaluation app's exact resource total is preserved from Modal's per-app report. Verification usage is the difference between that amount and the 0.22 USD metered-cost increase shown after both invocations completed.",
+  "rounding_note": "The aggregate billing-summary delta is reported to eight decimal places as 0.22000000 USD."
+}

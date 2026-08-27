@@ -1,0 +1,56 @@
+[project]
+name = "disagree-serving"
+version = "0.0.0"
+description = "Scale-to-zero model serving for the experiment"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Roger Rodriguez" }]
+dependencies = [
+  "disagree-contracts",
+  "fastapi==0.141.1",
+  "modal==1.5.4",
+  "pydantic==2.12.5",
+]
+
+[build-system]
+requires = ["uv_build==0.12.6"]
+build-backend = "uv_build"
+
+[tool.ty.environment]
+python-version = "3.11"
+root = ["./src"]
+
+[tool.ty.src]
+include = ["src", "tests"]
+
+[tool.coverage.run]
+branch = true
+omit = [
+  "src/disagree_serving/modal_app.py",
+  "src/disagree_serving/model_runtime.py",
+]
+source = ["disagree_serving"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.uv]
+required-version = "==0.12.6"
+
+[tool.uv.sources]
+disagree-contracts = { path = "../../packages/contracts", editable = true }
+
+[dependency-groups]
+dev = [
+  "coverage[toml]==7.15.4",
+  "ty==0.0.75",
+]
+serve = [
+  "accelerate==1.14.0",
+  "fastapi[standard-no-fastapi-cloud-cli]==0.141.1",
+  "huggingface-hub==1.28.0",
+  "peft==0.20.0",
+  "torch==2.9.1",
+  "transformers==5.5.0",
+]

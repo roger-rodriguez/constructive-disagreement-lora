@@ -1,0 +1,36 @@
+[project]
+name = "fine-tuning-tooling"
+version = "0.0.0"
+description = "Repository-wide tooling for the constructive-disagreement experiment"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Roger Rodriguez" }]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/roger-rodriguez/fine-tuning"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = ["I", "UP"]
+
+[tool.ty.environment]
+python-version = "3.11"
+root = ["./packages/contracts/src"]
+
+[tool.ty.src]
+include = ["packages/contracts/src", "packages/contracts/tests"]
+
+[tool.uv]
+package = false
+required-version = "==0.12.6"
+
+[dependency-groups]
+dev = [
+  "ruff==0.16.5",
+  "ty==0.0.75",
+]

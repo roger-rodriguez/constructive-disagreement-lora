@@ -1,0 +1,148 @@
+{
+  "prompts": {
+    "basic": {
+      "byte_size": 510,
+      "path": "prompts/basic.txt",
+      "sha256": "638febed692b5c909932753654dd8d167282a775b2aa15fdf0d8a2d79dc2c3b0"
+    },
+    "strong": {
+      "byte_size": 1801,
+      "path": "prompts/strong.txt",
+      "sha256": "6613e3b748db35e0bd9714b8ece0bee20c3b4ed07d1d372b8723731d084eb5ea"
+    }
+  },
+  "response_schema": {
+    "byte_size": 1325,
+    "path": "schema/decision-response-v1.schema.json",
+    "sha256": "6dc4ed40b512f64e48cf3a1d870188a94e2b37eb741afae3ef76a75fed00764c"
+  },
+  "schema_version": 1,
+  "splits": {
+    "test": {
+      "examples": {
+        "byte_size": 45906,
+        "path": "data/splits/test.jsonl",
+        "record_count": 100,
+        "sha256": "31b41c0c4dc8bfc681d8504ac60549e1ce5ab6643627752be483cac181e19c96"
+      },
+      "metadata": {
+        "byte_size": 44693,
+        "path": "data/metadata/test.jsonl",
+        "record_count": 100,
+        "sha256": "2f58f3b12fef56b6cbdffb23170c111d84295abf9d0966ee4f142273cb0a3a65"
+      },
+      "summary": {
+        "categories": {
+          "authorization_privacy_security_or_operational_risk": 9,
+          "constrained_but_reasonable_request": 19,
+          "implausible_estimate_or_schedule": 8,
+          "internal_contradiction": 9,
+          "material_harm_or_unethical_request": 8,
+          "missing_material_constraint": 7,
+          "safe_near_neighbor_to_flawed_request": 17,
+          "straightforward_reasonable_request": 14,
+          "unsupported_assumption_or_missing_evidence": 9
+        },
+        "decisions": {
+          "challenge": 50,
+          "comply": 50
+        },
+        "domains": {
+          "ai_agent_authorization": 12,
+          "customer_requests": 14,
+          "engineering_estimates": 12,
+          "hiring_team_management": 13,
+          "operations_incident_response": 12,
+          "product_requirements": 20,
+          "project_planning": 17
+        },
+        "minimal_pairs": 20,
+        "records": 100
+      }
+    },
+    "train": {
+      "examples": {
+        "byte_size": 181716,
+        "path": "data/splits/train.jsonl",
+        "record_count": 400,
+        "sha256": "a6316264b2248a16e5f1657ebf54057d14956ce99db2de2365c9fb26a814ae23"
+      },
+      "metadata": {
+        "byte_size": 182004,
+        "path": "data/metadata/train.jsonl",
+        "record_count": 400,
+        "sha256": "7b9f042b9efae2d47a05226069c119ce3913b01b55bbe7181e2f489cbee6e364"
+      },
+      "summary": {
+        "categories": {
+          "authorization_privacy_security_or_operational_risk": 40,
+          "constrained_but_reasonable_request": 60,
+          "implausible_estimate_or_schedule": 40,
+          "internal_contradiction": 40,
+          "material_harm_or_unethical_request": 20,
+          "missing_material_constraint": 40,
+          "safe_near_neighbor_to_flawed_request": 40,
+          "straightforward_reasonable_request": 60,
+          "unsupported_assumption_or_missing_evidence": 60
+        },
+        "decisions": {
+          "challenge": 240,
+          "comply": 160
+        },
+        "domains": {
+          "ai_agent_authorization": 53,
+          "customer_requests": 63,
+          "engineering_estimates": 59,
+          "hiring_team_management": 50,
+          "operations_incident_response": 57,
+          "product_requirements": 54,
+          "project_planning": 64
+        },
+        "minimal_pairs": 80,
+        "records": 400
+      }
+    },
+    "validation": {
+      "examples": {
+        "byte_size": 23930,
+        "path": "data/splits/validation.jsonl",
+        "record_count": 50,
+        "sha256": "0935f4be0aafea761b5608e5ae2e977583b72d376b0257c1ceea21baf8c082d5"
+      },
+      "metadata": {
+        "byte_size": 24022,
+        "path": "data/metadata/validation.jsonl",
+        "record_count": 50,
+        "sha256": "702942d877d6b4b4dc0ed7f5ade587a08b1e3d97b3e2b600f5da44db73713a2c"
+      },
+      "summary": {
+        "categories": {
+          "authorization_privacy_security_or_operational_risk": 6,
+          "constrained_but_reasonable_request": 5,
+          "implausible_estimate_or_schedule": 5,
+          "internal_contradiction": 5,
+          "material_harm_or_unethical_request": 4,
+          "missing_material_constraint": 5,
+          "safe_near_neighbor_to_flawed_request": 10,
+          "straightforward_reasonable_request": 5,
+          "unsupported_assumption_or_missing_evidence": 5
+        },
+        "decisions": {
+          "challenge": 30,
+          "comply": 20
+        },
+        "domains": {
+          "ai_agent_authorization": 5,
+          "customer_requests": 7,
+          "engineering_estimates": 6,
+          "hiring_team_management": 6,
+          "operations_incident_response": 9,
+          "product_requirements": 10,
+          "project_planning": 7
+        },
+        "minimal_pairs": 10,
+        "records": 50
+      }
+    }
+  }
+}

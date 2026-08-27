@@ -1,0 +1,88 @@
+{
+  "comparisons": {
+    "C_minus_A": {
+      "balanced_accuracy_difference": 0.16,
+      "mcnemar_exact_two_sided": {
+        "baseline_correct_candidate_wrong": 1,
+        "candidate_correct_baseline_wrong": 17,
+        "discordant_pairs": 18,
+        "p_value": 0.00014496
+      },
+      "paired_stratified_bootstrap_95_ci": {
+        "lower": 0.09,
+        "samples": 10000,
+        "seed": 3407,
+        "upper": 0.24
+      }
+    },
+    "C_minus_B": {
+      "balanced_accuracy_difference": 0.01,
+      "mcnemar_exact_two_sided": {
+        "baseline_correct_candidate_wrong": 2,
+        "candidate_correct_baseline_wrong": 3,
+        "discordant_pairs": 5,
+        "p_value": 1.0
+      },
+      "paired_stratified_bootstrap_95_ci": {
+        "lower": -0.03,
+        "samples": 10000,
+        "seed": 3407,
+        "upper": 0.05
+      }
+    },
+    "material_win_over_strong_prompt": {
+      "maximum_specificity_loss": 0.05,
+      "observed_balanced_accuracy_gain": 0.01,
+      "observed_specificity_change": -0.02,
+      "required_balanced_accuracy_gain": 0.08,
+      "threshold_met": false
+    }
+  },
+  "conditions": {
+    "A": {
+      "balanced_decision_accuracy": 0.81,
+      "decision_accuracy": 0.81,
+      "decision_correct": 81,
+      "false_objection_rate": 0.06,
+      "false_objections": 3,
+      "flawed_request_recall": 0.94,
+      "missed_risk_rate": 0.06,
+      "missed_risks": 3,
+      "raw_json_valid": 87,
+      "raw_json_valid_rate": 0.87,
+      "reasonable_request_specificity": 0.68,
+      "records": 100,
+      "unclear_or_invalid": 13
+    },
+    "B": {
+      "balanced_decision_accuracy": 0.96,
+      "decision_accuracy": 0.96,
+      "decision_correct": 96,
+      "false_objection_rate": 0.04,
+      "false_objections": 2,
+      "flawed_request_recall": 0.96,
+      "missed_risk_rate": 0.04,
+      "missed_risks": 2,
+      "raw_json_valid": 100,
+      "raw_json_valid_rate": 1.0,
+      "reasonable_request_specificity": 0.96,
+      "records": 100,
+      "unclear_or_invalid": 0
+    },
+    "C": {
+      "balanced_decision_accuracy": 0.97,
+      "decision_accuracy": 0.97,
+      "decision_correct": 97,
+      "false_objection_rate": 0.06,
+      "false_objections": 3,
+      "flawed_request_recall": 1.0,
+      "missed_risk_rate": 0.0,
+      "missed_risks": 0,
+      "raw_json_valid": 100,
+      "raw_json_valid_rate": 1.0,
+      "reasonable_request_specificity": 0.94,
+      "records": 100,
+      "unclear_or_invalid": 0
+    }
+  }
+}

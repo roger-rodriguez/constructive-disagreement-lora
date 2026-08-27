@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.coverage
+.coverage.*
+coverage*.json
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model and training material that must not be committed
+*.bin
+*.ckpt
+*.gguf
+*.onnx
+*.pt
+*.pth
+*.safetensors
+checkpoints/
+models/
+wandb/
+
+# Provider logs and local scratch space
+logs/
+temp/
+tmp/
+.release/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

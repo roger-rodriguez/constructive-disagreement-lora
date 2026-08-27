@@ -1,0 +1,15 @@
+{
+  "adapter_sha256": "8b211ae87e6f7b302f3c2adb80a22bbf2bae129d8d683285f77470e44cbdc63f",
+  "authenticated_as": "rrod",
+  "platform_managed_files": [
+    ".gitattributes"
+  ],
+  "public": true,
+  "published_on": "2026-08-27",
+  "remote_verification": "passed",
+  "repository_id": "rrod/qwen3-4b-constructive-disagreement-lora",
+  "revision": "eae43ddb16c580c4179ed8088c8180b28fb4d572",
+  "schema_version": 1,
+  "source_run_id": "primary-qlora-001",
+  "url": "https://huggingface.co/rrod/qwen3-4b-constructive-disagreement-lora"
+}

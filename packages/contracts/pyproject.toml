@@ -1,0 +1,26 @@
+[project]
+name = "disagree-contracts"
+version = "0.0.0"
+description = "Shared contracts for the constructive-disagreement experiment"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Roger Rodriguez" }]
+dependencies = []
+
+[build-system]
+requires = ["uv_build==0.12.6"]
+build-backend = "uv_build"
+
+[tool.uv]
+required-version = "==0.12.6"
+
+[tool.coverage.run]
+branch = true
+source = ["disagree_contracts"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[dependency-groups]
+dev = ["coverage[toml]==7.15.4"]
