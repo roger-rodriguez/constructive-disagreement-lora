@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.11, <3.13"
 
 [[package]]
-name = "fine-tuning-tooling"
+name = "constructive-disagreement-lora-tooling"
 version = "0.0.0"
 source = { virtual = "." }
 

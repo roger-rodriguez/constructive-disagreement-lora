@@ -1,5 +1,5 @@
 [project]
-name = "fine-tuning-tooling"
+name = "constructive-disagreement-lora-tooling"
 version = "0.0.0"
 description = "Repository-wide tooling for the constructive-disagreement experiment"
 readme = "README.md"
@@ -9,7 +9,7 @@ authors = [{ name = "Roger Rodriguez" }]
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/roger-rodriguez/fine-tuning"
+Repository = "https://github.com/roger-rodriguez/constructive-disagreement-lora"
 
 [tool.ruff]
 line-length = 88

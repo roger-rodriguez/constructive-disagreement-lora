@@ -1,6 +1,6 @@
 # Fine-tuning a model to disagree constructively
 
-[![CI](https://github.com/roger-rodriguez/fine-tuning/actions/workflows/ci.yml/badge.svg)](https://github.com/roger-rodriguez/fine-tuning/actions/workflows/ci.yml)
+[![CI](https://github.com/roger-rodriguez/constructive-disagreement-lora/actions/workflows/ci.yml/badge.svg)](https://github.com/roger-rodriguez/constructive-disagreement-lora/actions/workflows/ci.yml)
 [![Code license](https://img.shields.io/badge/code-Apache--2.0-blue.svg)](LICENSE)
 [![Data license](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 [![LoRA adapter](https://img.shields.io/badge/Hugging%20Face-LoRA-ffd21e.svg)](https://huggingface.co/rrod/qwen3-4b-constructive-disagreement-lora)

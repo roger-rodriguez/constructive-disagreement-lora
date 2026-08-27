@@ -17,7 +17,7 @@ tags:
 # Qwen3 4B Constructive Disagreement LoRA
 
 This LoRA adapter comes from the reproducible experiment in
-[`roger-rodriguez/fine-tuning`](https://github.com/roger-rodriguez/fine-tuning).
+[`roger-rodriguez/constructive-disagreement-lora`](https://github.com/roger-rodriguez/constructive-disagreement-lora).
 It adapts `Qwen/Qwen3-4B-Instruct-2507` to classify fictional workplace requests
 as `challenge` or `comply` and return a five-field JSON response.
 
@@ -43,9 +43,9 @@ win over strong prompting. It caught all 50 flawed requests and falsely
 challenged three of 50 reasonable requests.
 
 See the
-[full evaluation](https://github.com/roger-rodriguez/fine-tuning/blob/main/docs/evaluation.md)
+[full evaluation](https://github.com/roger-rodriguez/constructive-disagreement-lora/blob/main/docs/evaluation.md)
 and
-[raw evidence](https://github.com/roger-rodriguez/fine-tuning/tree/main/artifacts/runs/held-out-evaluation-001).
+[raw evidence](https://github.com/roger-rodriguez/constructive-disagreement-lora/tree/main/artifacts/runs/held-out-evaluation-001).
 
 ## Intended use
 
@@ -97,7 +97,7 @@ model = PeftModel.from_pretrained(base_model, ADAPTER_ID)
 ```
 
 Use the frozen basic prompt from
-[`experiment/prompts/basic.txt`](https://github.com/roger-rodriguez/fine-tuning/blob/main/experiment/prompts/basic.txt)
+[`experiment/prompts/basic.txt`](https://github.com/roger-rodriguez/constructive-disagreement-lora/blob/main/experiment/prompts/basic.txt)
 as the system message, then render the conversation with the included tokenizer
 chat template. The reported evaluation used greedy decoding with at most 256
 new tokens; raw JSON was never repaired or retried.

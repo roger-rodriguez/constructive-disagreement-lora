@@ -74,7 +74,7 @@ def verify_adapter_bundle(adapter_dir: Path, manifest_path: Path) -> dict[str, A
     return {
         "schema_version": 1,
         "source_run_id": manifest.get("run_id"),
-        "source_repository": "https://github.com/roger-rodriguez/fine-tuning",
+        "source_repository": "https://github.com/roger-rodriguez/constructive-disagreement-lora",
         "base_model": manifest.get("model"),
         "base_model_revision": manifest.get("model_revision"),
         "base_model_license": manifest.get("model_license"),
