@@ -6,7 +6,9 @@ The Hugging Face repository is a separate model release. Do not add the
 Published release:
 
 - Repository: `rrod/qwen3-4b-constructive-disagreement-lora`
-- Revision: `eae43ddb16c580c4179ed8088c8180b28fb4d572`
+- Revision: `574ade5ec9ca7f2ac834987f733145dd716432eb`
+- Adapter digest unchanged from the original weight revision
+  `eae43ddb16c580c4179ed8088c8180b28fb4d572`
 - Visibility: public
 - Remote byte verification: passed
 - Receipt: [`huggingface-primary-qlora-001.json`](../artifacts/releases/huggingface-primary-qlora-001.json)

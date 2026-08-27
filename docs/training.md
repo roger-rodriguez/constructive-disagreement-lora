@@ -97,4 +97,7 @@ Hub commit, and byte-verifies it. The complete upload command is documented in
 
 The reported adapter is public at
 [`rrod/qwen3-4b-constructive-disagreement-lora`](https://huggingface.co/rrod/qwen3-4b-constructive-disagreement-lora),
-revision `eae43ddb16c580c4179ed8088c8180b28fb4d572`.
+revision `574ade5ec9ca7f2ac834987f733145dd716432eb`. That revision updates
+documentation only; the serving configuration remains pinned to the original
+weight revision `eae43ddb16c580c4179ed8088c8180b28fb4d572`, whose adapter bytes
+are identical.

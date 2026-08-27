@@ -23,8 +23,9 @@ or the untouched test set.
 The adapter is stored in the `fine-tuning-training-output` Modal Volume at
 `/runs/primary-qlora-001/adapter` and published as
 [`rrod/qwen3-4b-constructive-disagreement-lora`](https://huggingface.co/rrod/qwen3-4b-constructive-disagreement-lora)
-at immutable revision `eae43ddb16c580c4179ed8088c8180b28fb4d572`. Its main
-safetensors SHA-256 is
+at original weight revision `eae43ddb16c580c4179ed8088c8180b28fb4d572`.
+Documentation-only revision `574ade5ec9ca7f2ac834987f733145dd716432eb`
+retains the same adapter files. The main safetensors SHA-256 is
 `8b211ae87e6f7b302f3c2adb80a22bbf2bae129d8d683285f77470e44cbdc63f`.
 A separate read-only Modal worker verified the persisted hashes and evidence;
 the publisher independently downloaded and byte-verified the Hub revision.
